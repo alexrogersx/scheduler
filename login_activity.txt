@@ -1,0 +1,122 @@
+May 30, 2021 4:33:21 PM logic.SessionInformation login
+WARNING: Unsuccessful Login Attempt Username: wer
+May 30, 2021 4:33:55 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 4:44:22 PM logic.SessionInformation login
+WARNING: Unsuccessful Login Attempt Username: test
+May 30, 2021 4:44:30 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 4:45:29 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 4:50:23 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:24:10 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:27:05 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:32:54 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:35:40 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:42:04 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:43:18 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 5:46:23 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 7:00:30 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 7:04:01 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 8:50:13 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 8:51:12 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 8:54:04 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 8:58:52 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:14:22 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:15:21 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:21:01 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:24:35 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:28:01 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:28:41 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:29:39 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:30:26 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:35:08 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:40:00 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:41:21 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:47:06 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:49:21 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:50:29 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:51:22 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:52:32 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:54:07 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:54:52 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:56:51 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:57:42 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 9:59:08 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 30, 2021 10:00:16 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 7:51:12 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 7:55:33 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:04:14 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:10:19 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:12:13 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:18:02 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:22:55 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:42:34 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:44:35 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:45:46 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:46:45 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 8:49:31 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 11:30:23 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 1:27:21 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+May 31, 2021 1:43:11 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+Aug 21, 2021 10:27:44 AM logic.SessionInformation login
+WARNING: Unsuccessful Login Attempt Username: pass
+Aug 21, 2021 10:27:53 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+Aug 21, 2021 11:35:59 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+Aug 21, 2021 11:45:11 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+Aug 21, 2021 11:45:36 AM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ebeae6;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageCustomersController">
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="900.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleMenu" text="Main Menu">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="827.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+         </children>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="850.0" translateY="10.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <TextField fx:id="textFilter" alignment="CENTER_RIGHT" promptText="Filter Results" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+               <content>
+                  <TableView fx:id="tableCustomer" onMouseClicked="#handleCustomerSelect" prefHeight="398.0" prefWidth="850.0">
+                    <columns>
+                      <TableColumn fx:id="columnCustomerID" prefWidth="66.5" text="ID" />
+                      <TableColumn fx:id="columnName" prefWidth="122.0" text="Name" />
+                        <TableColumn fx:id="columnAddress" prefWidth="136.5" text="Address" />
+                        <TableColumn fx:id="columnPostalCode" prefWidth="106.5" text="Postal Code" />
+                        <TableColumn fx:id="columnPhone" prefWidth="110.0" text="Phone " />
+                        <TableColumn fx:id="columnDivision" prefWidth="180.0" text="Division" />
+                        <TableColumn fx:id="columnCountry" prefWidth="127.0" text="Country" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="39.0" prefWidth="750.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button maxHeight="30.0" mnemonicParsing="false" onAction="#handleAdd" style="-fx-background-radius: 5;" text="Add" />
+                  <Button layoutX="10.0" layoutY="10.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleUpdate" style="-fx-background-radius: 5;" text="Update" />
+                  <Button layoutX="94.0" layoutY="10.0" maxHeight="30.0" mnemonicParsing="false" onAction="#handleRemove" style="-fx-background-radius: 5;" text="Remove" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <top>
+      <Label fx:id="labelTitle" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #224861;" styleClass="titleBar" text="Manage Customers" textFill="WHITE" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

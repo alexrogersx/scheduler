@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ebeae6;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifyAppointmentController">
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="900.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="827.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+         </children>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <GridPane alignment="CENTER" maxHeight="440.0" maxWidth="800.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="140.0" minWidth="10.0" prefWidth="84.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="360.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="400.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="400.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="400.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="355.0" minWidth="10.0" prefWidth="51.5" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="355.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="309.5" minWidth="10.0" prefWidth="108.5" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="45.5" minHeight="10.0" prefHeight="42.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="25.0" minHeight="9.0" prefHeight="10.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="116.5" minHeight="10.0" prefHeight="109.5" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="96.0" prefHeight="100.0" prefWidth="74.0" text="Description" textAlignment="JUSTIFY" GridPane.columnSpan="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="33.0" prefHeight="18.0" prefWidth="154.0" text="Appointment ID" GridPane.columnIndex="6" />
+            <Label fx:id="labelID" prefHeight="18.0" prefWidth="133.0" text="ID#" textAlignment="RIGHT" GridPane.columnIndex="7" />
+            <TextArea fx:id="textDescription" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></TextArea>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="123.0" prefHeight="50.0" prefWidth="211.0" text="Title" textAlignment="JUSTIFY" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="dateStart" promptText="Start" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <DatePicker fx:id="dateEnd" layoutX="228.0" layoutY="112.0" promptText="End" showWeekNumbers="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <Spinner fx:id="spinStartTime" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Spinner>
+            <Spinner fx:id="spinEndTime" editable="true" layoutX="328.0" layoutY="112.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Spinner>
+            <TextField fx:id="textTitle" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textType" layoutX="229.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="171.0" prefHeight="0.0" prefWidth="212.0" text="Type" textAlignment="JUSTIFY" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></Label>
+            <ComboBox fx:id="comboCustomer" prefHeight="27.0" prefWidth="180.0" promptText="Customer" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ComboBox fx:id="comboContact" prefHeight="27.0" prefWidth="180.0" promptText="Contact" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#handleSubmit" prefHeight="30.0" prefWidth="152.0" text="Submit" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="12.0" layoutY="348.0" prefHeight="0.0" prefWidth="212.0" text="Location" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="textLocation" layoutX="94.0" layoutY="344.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="comboUser" layoutX="585.0" layoutY="118.0" prefHeight="27.0" prefWidth="180.0" promptText="User" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label fx:id="labelTitle" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #224861;" styleClass="titleBar" text="Modify Appointment" textFill="WHITE" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
