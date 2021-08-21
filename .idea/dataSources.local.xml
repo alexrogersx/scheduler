@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-211.7442.40">
+    <data-source name="MySQL - WJ08sa0@wgudb.ucertify.com" uuid="cdd2928e-ade9-4ec6-b09d-a3d0cf270a8d">
+      <database-info product="MySQL" version="5.7.34-0ubuntu0.18.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.34" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>U08sa0</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="WJ08sa0" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

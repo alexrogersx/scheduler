@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SW2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SW2_jar</output-path>
+    <root id="archive" name="SW2.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="SW2" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/11.0.1/javafx-graphics-11.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/11.0.1/javafx-base-11.0.1-win.jar" path-in-jar="/" />
+      <element id="library" level="project" name="lib" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/11.0.1/javafx-base-11.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/11.0.1/javafx-graphics-11.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$javafx$/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/11.0.1/javafx-controls-11.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.22.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/protobuf-java-3.11.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/11.0.1/javafx-controls-11.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
