@@ -28,6 +28,7 @@ public abstract class SessionInformation {
      * The constant loginLogger.
      */
     public static Logger loginLogger;
+    public static Logger errorLogger;
 
     /**
      * Checks login credentials and logs user in
@@ -62,12 +63,19 @@ public abstract class SessionInformation {
         getSystemLanguage();
         getSystemZone();
         loginLogger = Logger.getLogger("login_activity.txt");
+        errorLogger = Logger.getLogger("error_logs.txt");
 
-        FileHandler fileHandler = new FileHandler("login_activity.txt", true);
+        FileHandler loginFileHandler = new FileHandler("login_activity.txt", true);
+        FileHandler errorFileHandler = new FileHandler("error_logs.txt", true);
+
         SimpleFormatter simpleFormatter = new SimpleFormatter();
-        fileHandler.setFormatter(simpleFormatter);
-        loginLogger.addHandler(fileHandler);
+        loginFileHandler.setFormatter(simpleFormatter);
+        loginLogger.addHandler(loginFileHandler);
         loginLogger.setLevel(Level.ALL);
+
+        errorFileHandler.setFormatter(simpleFormatter);
+        errorLogger.addHandler(errorFileHandler);
+        errorLogger.setLevel(Level.WARNING);
     }
 
     /**

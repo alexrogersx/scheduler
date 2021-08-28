@@ -2,7 +2,9 @@ package controllers;
 
 import helpers.Prompts;
 import helpers.TimeTableCellFactory;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.ObservableArray;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -88,17 +90,14 @@ public class ManageAppointmentsController {
     /**
      * Top level filtered list.
      * Used to filter appointments by date
-     * Lambda is used for clean inline definition of filter predicate
      */
     private final FilteredList<Appointment> appointmentDateFilteredList = new FilteredList<>(DataCache.getAppointments(), s -> true);
     /**
      * Filtered list used to filter appointments by either of the two customer, contact combo boxes
-     * Lambda is used for clean inline definition of filter predicate
      */
     private final FilteredList<Appointment> appointmentsComboFilteredList = new FilteredList<Appointment>(appointmentDateFilteredList, s -> true);
     /**
      * Filtered list used to filter appointments by text parameter passed in the textFilter field
-     * Lambda is used for clean inline definition of filter predicate
      */
     private final FilteredList<Appointment> appointmentsTextFilteredList = new FilteredList<Appointment>(appointmentsComboFilteredList, s -> true);
 
@@ -106,9 +105,11 @@ public class ManageAppointmentsController {
      * Adds a null value to the first index in the list.
      * @param list a list which to add a null value to
      */
-    private ObservableList addNull(ObservableList list) {
-        if (list.get(0) != null) list.add(0, null);
-        return list;
+    private static < E > ObservableList addNull(ObservableList< E > list) {
+        ObservableList < E > newList =  FXCollections.observableArrayList();
+        newList.addAll(list);
+        if (newList.get(0) != null) newList.add(0, null);
+        return newList;
     }
 
     /**
@@ -128,20 +129,19 @@ public class ManageAppointmentsController {
         columnEnd.setCellValueFactory(new PropertyValueFactory<>("end"));
         columnStart.setCellFactory(callback -> new TimeTableCellFactory());
         columnEnd.setCellFactory(callback -> new TimeTableCellFactory());
-//
+
         // retrieve customer + contact data and adds a null value. This will eventually The null value is used
         //  in a combo box to filter the tables. The null will be selectable as "no filter" option.
         ObservableList<Contact> contactsWithNull = addNull(DataCache.getContacts());
-//        contactsWithNull.add(0, null);
+//        ObservableList<Contact> contactsWithNull = DataCache.getContacts();
         ObservableList<Customer> customersWithNull = addNull(DataCache.getCustomers());
-//        customersWithNull.add(0, null);
+//        ObservableList<Customer> customersWithNull = DataCache.getCustomers();
 
         comboContactFilter.setItems(contactsWithNull);
         comboCustomerFilter.setItems(customersWithNull);
 
         /**
          * assigns event listener to textProperty
-         * @Lambda is used for clean inline definition of event handler
          */
         textFilter.textProperty().addListener((observable, oldValue, newValue) -> appointmentsTextFilteredList.setPredicate(appointment -> {
             if (newValue.isEmpty()) return true;
@@ -189,6 +189,7 @@ public class ManageAppointmentsController {
             return;
         }
         appointmentsComboFilteredList.setPredicate(appointment -> appointment.getContact().equals(comboContactFilter.getValue()));
+        // reset other appointment filter
         comboCustomerFilter.setValue(null);
     }
 
@@ -204,6 +205,7 @@ public class ManageAppointmentsController {
             return;
         }
         appointmentsComboFilteredList.setPredicate(appointment -> appointment.getCustomer().equals(comboCustomerFilter.getValue()));
+        // reset other appointment filter
         comboContactFilter.setValue(null);
     }
 

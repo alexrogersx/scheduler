@@ -14,6 +14,7 @@ import logic.enums.ItemType;
 import logic.enums.ActionType;
 
 import java.io.IOException;
+import java.util.logging.Level;
 
 /**
  * The FXML Controller for the manage customer page.
@@ -49,13 +50,13 @@ public class ManageCustomersController {
     @FXML
     private TableColumn<Customer, Country> columnCountry;
 
+    private FilteredList<Customer> customersFilteredList = new FilteredList<>(DataCache.getCustomers(), s -> true);
+
 
     /**
      * Initialize.
-     * Lambda is used for clean inline definition of filter predicate and for application of inline event handler
      */
     public void initialize(){
-        FilteredList<Customer> customersFilteredList = new FilteredList<>(DataCache.getCustomers(), s -> true);
 
         tableCustomer.setItems(customersFilteredList);
         columnCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
@@ -72,7 +73,7 @@ public class ManageCustomersController {
             try {
                 if ( customer.getCustomerID() == Integer.parseInt(newValue)) return true;
             }
-            catch (Exception ignored) {
+            catch (Exception ignore) {
             }
             return false;
         }) );
@@ -87,9 +88,7 @@ public class ManageCustomersController {
     void handleCustomerSelect() {
         selectedCustomer = (tableCustomer.getSelectionModel().getSelectedItem());
     }
-
     private Customer selectedCustomer;
-
 
     /**
      * Handle add.
@@ -104,7 +103,6 @@ public class ManageCustomersController {
 
     /**
      * Handle exit.
-     * Lambda is used for clean inline definition of filter predicate
      */
     @FXML
     void handleExit() {
