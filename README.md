@@ -6,6 +6,8 @@
 2. Download or Clone this repo (or optionally just download the .jar file mentioned below)
 3. Run .jar file located in the target directory 
 
+### [Documentation - JavaDocs](https://alexrogersdesign.github.io/scheduler/)
+
 ## About
 This application is a customer appointment management solution designed for a small business who needs to keep track of
 their customers and associated appointments. Data is stored in a mysql database and accessed via JDBC.
