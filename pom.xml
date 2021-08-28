@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>WGU</groupId>
-    <artifactId>SW2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>alexrogersdesign</groupId>
+    <artifactId>Scheduler</artifactId>
+    <version>1.0</version>
+
+    <name>Scheduler</name>
+    <url>https://github.com/alexrogersdesign/scheduler</url>
 
     <properties>
         <java.version>11</java.version>

@@ -16,10 +16,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SW2" />
+        <module name="Scheduler" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Scheduler" target="11" />
       <module name="SW2" target="11" />
     </bytecodeTargetLevel>
   </component>
