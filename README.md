@@ -2,7 +2,7 @@
 https://user-images.githubusercontent.com/51722825/131202483-6a9a9348-6d44-4aa1-9b36-d59b5b84632e.mov
 
 # Appointment Scheduling Tool
-> An Appointment and Customer Managment App Written in Java / JavaFX
+> An Appointment and Customer Management App Written in Java / JavaFX
 
 ## To Run 
 1. [Install Java](https://www.java.com/en/download/) if not already installed.
