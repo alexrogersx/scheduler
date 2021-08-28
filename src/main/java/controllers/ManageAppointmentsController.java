@@ -103,8 +103,10 @@ public class ManageAppointmentsController {
     private final FilteredList<Appointment> appointmentsTextFilteredList = new FilteredList<Appointment>(appointmentsComboFilteredList, s -> true);
 
     /**
-     * Adds a null value to the first index in the list.
-     * @param list a list which to add a null value to
+     * Deep copys the provided list and adds a null value to the first index.
+     * @param list a list which to copy add a null value to
+     * @param <E> And observablelist to be coppied
+     * @return a copy of the Observable List
      */
     private static < E > ObservableList addNull(ObservableList< E > list) {
         ObservableList < E > newList =  FXCollections.observableArrayList();
