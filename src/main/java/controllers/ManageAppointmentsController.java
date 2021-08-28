@@ -90,10 +90,11 @@ public class ManageAppointmentsController {
     /**
      * Top level filtered list.
      * Used to filter appointments by date
+     * Lambda is used for clean inline definition of filter predicate
      */
     private final FilteredList<Appointment> appointmentDateFilteredList = new FilteredList<>(DataCache.getAppointments(), s -> true);
     /**
-     * Filtered list used to filter appointments by either of the two customer, contact combo boxes
+     * Filtered list used to filter appointments by either the customer or contact combo boxes
      */
     private final FilteredList<Appointment> appointmentsComboFilteredList = new FilteredList<Appointment>(appointmentDateFilteredList, s -> true);
     /**
@@ -156,7 +157,7 @@ public class ManageAppointmentsController {
     }
 
     /**
-     * Handle add.
+     * Eventhandler for the Add button
      *
      * @param event the event
      * @throws IOException the io exception
@@ -167,8 +168,7 @@ public class ManageAppointmentsController {
     }
 
     /**
-     * Handle all.
-     * Lambda is used for clean inline definition of filter predicate
+     * Eventhandler for the All sort button
      * @param event the event
      */
     @FXML
@@ -178,8 +178,7 @@ public class ManageAppointmentsController {
 
 
     /**
-     * Handle contact filter.
-     * Lambda is used for clean inline definition of filter predicate
+     * Handle contact filter combo box.
      * @param event the event
      */
     @FXML
@@ -195,7 +194,6 @@ public class ManageAppointmentsController {
 
     /**
      * Handle customer filter.
-     * Lambda is used for clean inline definition of filter predicate
      * @param event the event
      */
     @FXML
@@ -211,7 +209,6 @@ public class ManageAppointmentsController {
 
     /**
      * Handle exit.
-     * Lambda is used for clean inline definition of filter predicate
      * @param event the event
      */
     @FXML
@@ -234,8 +231,7 @@ public class ManageAppointmentsController {
     }
 
     /**
-     * Handle monthly.
-     * Lambda is used for clean inline definition of filter predicate
+     * Eventhandler for the This Month radio button
      * @param event the event
      */
     @FXML
@@ -245,7 +241,6 @@ public class ManageAppointmentsController {
 
     /**
      * Handle remove.
-     * Lambda is used for clean inline definition of filter predicate
      * @param event the event
      * @throws IOException the io exception
      */
@@ -264,8 +259,8 @@ public class ManageAppointmentsController {
     }
 
     /**
-     * Handle select appointment.
-     *
+     * Eventhandler for selecting an appointment in the table
+     * writes selected appointment to variable for future use
      * @param event the event
      */
     @FXML
