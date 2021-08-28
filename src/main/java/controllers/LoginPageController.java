@@ -11,11 +11,10 @@ import java.util.ResourceBundle;
 
 
 /**
- * The Controller for the login page.
+ * The FXML Controller for the login page.
  */
 public class LoginPageController {
-    private final SceneController sceneController = new SceneController();
-
+    private final AppController appController = new AppController();
 
     @FXML
     private Label labelUsername;
@@ -68,7 +67,7 @@ public class LoginPageController {
      */
     @FXML
     void handleExit() {
-            sceneController.exit();
+            appController.exit();
     }
 
     /**
@@ -84,7 +83,7 @@ public class LoginPageController {
         String userName = txtUsername.getText().strip().toLowerCase();
         String password = txtPassword.getText().strip();
         if (SessionInformation.login(userName, password))
-            sceneController.mainMenuFromLogin(event);
+            appController.mainMenuFromLogin(event);
         else {
             Alert error = Prompts.failedLogin(resourceBundle);
             error.show();

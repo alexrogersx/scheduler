@@ -17,11 +17,11 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
- * The Controller for the main menu page.
+ * The FXML Controller for the main menu page.
  */
 public class MainMenuController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
     @FXML
     private ListView<Appointment> listViewAppointments;
@@ -67,7 +67,7 @@ public class MainMenuController {
     @FXML
     void handleExit() {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
-        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> sceneController.exit());
+        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> appController.exit());
     }
 
     /**
@@ -78,7 +78,7 @@ public class MainMenuController {
      */
     @FXML
     void handleGenerateReport(ActionEvent event) throws IOException {
-        sceneController.reportPage(event);
+        appController.reportPage(event);
     }
 
     /**
@@ -90,7 +90,7 @@ public class MainMenuController {
     @FXML
     void handleLogout(ActionEvent event) throws IOException {
         SessionInformation.logout();
-        sceneController.loginPage(event);
+        appController.loginPage(event);
     }
 
     /**
@@ -101,7 +101,7 @@ public class MainMenuController {
      */
     @FXML
     void handleManageAppointments(ActionEvent event) throws IOException {
-        sceneController.manageAppointments(event);
+        appController.manageAppointments(event);
     }
 
     /**
@@ -112,7 +112,7 @@ public class MainMenuController {
      */
     @FXML
     void handleManageCustomers(ActionEvent event) throws IOException {
-        sceneController.manageCustomers(event);
+        appController.manageCustomers(event);
     }
 
 }

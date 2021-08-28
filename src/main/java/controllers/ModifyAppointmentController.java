@@ -21,11 +21,11 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 /**
- * The type Modify appointment controller.
+ * The FXML Controller for the modify appointment page.
  */
 public class ModifyAppointmentController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
     @FXML
     private Label labelID;
@@ -159,7 +159,7 @@ public class ModifyAppointmentController {
         Alert confirm = Prompts.confirm(ActionType.CANCEL, ItemType.APPOINTMENT);
         confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> {
             try {
-                sceneController.manageAppointments(event);
+                appController.manageAppointments(event);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -173,7 +173,7 @@ public class ModifyAppointmentController {
     @FXML
     void handleExit() {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
-        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> sceneController.exit());
+        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> appController.exit());
     }
 
     /**
@@ -238,7 +238,7 @@ public class ModifyAppointmentController {
             DataCache.updateAppointment(appointment);
         }
 
-        sceneController.manageAppointments(event);
+        appController.manageAppointments(event);
     }
 
 }

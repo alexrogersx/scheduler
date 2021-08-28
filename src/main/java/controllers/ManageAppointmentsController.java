@@ -22,12 +22,12 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.IsoFields;
 
 /**
- * The Controller for the manage appointments page.
+ * The FXML Controller for the manage appointments page.
  */
 @SuppressWarnings("ALL")
 public class ManageAppointmentsController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
     @FXML
     private TextField textFilter;
@@ -103,7 +103,16 @@ public class ManageAppointmentsController {
     private final FilteredList<Appointment> appointmentsTextFilteredList = new FilteredList<Appointment>(appointmentsComboFilteredList, s -> true);
 
     /**
-     * Initialize.
+     * Adds a null value to the first index in the list.
+     * @param list a list which to add a null value to
+     */
+    private ObservableList addNull(ObservableList list) {
+        if (list.get(0) != null) list.add(0, null);
+        return list;
+    }
+
+    /**
+     * Initializes the scene.
      */
     public void initialize(){
 
@@ -119,11 +128,13 @@ public class ManageAppointmentsController {
         columnEnd.setCellValueFactory(new PropertyValueFactory<>("end"));
         columnStart.setCellFactory(callback -> new TimeTableCellFactory());
         columnEnd.setCellFactory(callback -> new TimeTableCellFactory());
-
-        ObservableList<Contact> contactsWithNull = DataCache.getContacts();
-        contactsWithNull.add(0, null);
-        ObservableList<Customer> customersWithNull = DataCache.getCustomers();
-        customersWithNull.add(0, null);
+//
+        // retrieve customer + contact data and adds a null value. This will eventually The null value is used
+        //  in a combo box to filter the tables. The null will be selectable as "no filter" option.
+        ObservableList<Contact> contactsWithNull = addNull(DataCache.getContacts());
+//        contactsWithNull.add(0, null);
+        ObservableList<Customer> customersWithNull = addNull(DataCache.getCustomers());
+//        customersWithNull.add(0, null);
 
         comboContactFilter.setItems(contactsWithNull);
         comboCustomerFilter.setItems(customersWithNull);
@@ -152,7 +163,7 @@ public class ManageAppointmentsController {
      */
     @FXML
     void handleAdd(ActionEvent event) throws IOException {
-        sceneController.addAppointment(event);
+        appController.addAppointment(event);
     }
 
     /**
@@ -205,7 +216,7 @@ public class ManageAppointmentsController {
     void handleExit(ActionEvent event) {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
         confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> {
-            sceneController.exit();
+            appController.exit();
         });
     }
 
@@ -217,7 +228,7 @@ public class ManageAppointmentsController {
      */
     @FXML
     void handleMenu(ActionEvent event) throws IOException {
-        sceneController.mainMenu(event);
+        appController.mainMenu(event);
     }
 
     /**
@@ -243,7 +254,7 @@ public class ManageAppointmentsController {
             try {
                 DataCache.deleteAppointment(selectedAppointment);
                 Prompts.informDeletedAppointment(selectedAppointment).showAndWait();
-                sceneController.mainMenu(event);
+                appController.mainMenu(event);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -274,7 +285,7 @@ public class ManageAppointmentsController {
     @FXML
     void handleUpdate(ActionEvent event) throws IOException {
         if (selectedAppointment != null)
-            sceneController.updateAppointment(event, selectedAppointment);
+            appController.updateAppointment(event, selectedAppointment);
     }
 
     /**

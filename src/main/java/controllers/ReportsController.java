@@ -19,11 +19,11 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * The type controller for the report page.
+ * The FXML Controller for the report page.
  */
 public class ReportsController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
 
     @FXML
@@ -81,7 +81,7 @@ public class ReportsController {
     @FXML
     void handleExit() {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
-        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> sceneController.exit());
+        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> appController.exit());
     }
 
     /**
@@ -108,7 +108,7 @@ public class ReportsController {
      */
     @FXML
     void handleMenu(ActionEvent event) throws IOException {
-        sceneController.mainMenu(event);
+        appController.mainMenu(event);
     }
 
 }

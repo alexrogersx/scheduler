@@ -15,12 +15,12 @@ import logic.enums.ActionType;
 import java.io.IOException;
 
 /**
- * The Controller for the modify customer page.
+ * The FXML Controller for the modify customer page.
  */
 @SuppressWarnings("ALL")
 public class ModifyCustomerController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
     @FXML
     private Label labelID;
@@ -126,7 +126,7 @@ public class ModifyCustomerController {
         Alert confirm = Prompts.confirm(ActionType.CANCEL, ItemType.CUSTOMER);
         confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> {
             try {
-                sceneController.manageCustomers(event);
+                appController.manageCustomers(event);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -155,7 +155,7 @@ public class ModifyCustomerController {
     @FXML
     void handleExit(ActionEvent event) {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
-        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> sceneController.exit());
+        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> appController.exit());
     }
 
     /**
@@ -196,7 +196,7 @@ public class ModifyCustomerController {
             customer.setCustomerID(Integer.parseInt(labelID.getText()));
             DataCache.updateCustomer(customer);
         }
-        sceneController.manageCustomers(event);
+        appController.manageCustomers(event);
     }
 
 }

@@ -16,11 +16,11 @@ import logic.enums.ActionType;
 import java.io.IOException;
 
 /**
- * The Controller for the manage customer page.
+ * The FXML Controller for the manage customer page.
  */
 public class ManageCustomersController {
 
-    private final SceneController sceneController = new SceneController();
+    private final AppController appController = new AppController();
 
     @FXML
     private TextField textFilter;
@@ -57,7 +57,6 @@ public class ManageCustomersController {
     public void initialize(){
         FilteredList<Customer> customersFilteredList = new FilteredList<>(DataCache.getCustomers(), s -> true);
 
-
         tableCustomer.setItems(customersFilteredList);
         columnCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
         columnName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
@@ -66,7 +65,6 @@ public class ManageCustomersController {
         columnDivision.setCellValueFactory(new PropertyValueFactory<>("division"));
         columnPhone.setCellValueFactory(new PropertyValueFactory<>("phone"));
         columnPostalCode.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
-
 
         textFilter.textProperty().addListener((observable, oldValue, newValue) -> customersFilteredList.setPredicate(customer -> {
             if (newValue.isEmpty()) return true;
@@ -81,7 +79,8 @@ public class ManageCustomersController {
     }
 
     /**
-     * Handle customer select.
+     * Eventhandler called when a customer is selected, stores selected customer in a variable to allow for access by
+     * other methods.
      *
      */
     @FXML
@@ -100,7 +99,7 @@ public class ManageCustomersController {
      */
     @FXML
     void handleAdd(ActionEvent event) throws IOException {
-        sceneController.addCustomer(event);
+        appController.addCustomer(event);
     }
 
     /**
@@ -110,7 +109,7 @@ public class ManageCustomersController {
     @FXML
     void handleExit() {
         Alert confirm = Prompts.confirm(ActionType.EXIT, ItemType.APPLICATION);
-        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> sceneController.exit());
+        confirm.showAndWait().filter(r -> r == ButtonType.OK).ifPresent(r -> appController.exit());
     }
 
     /**
@@ -121,7 +120,7 @@ public class ManageCustomersController {
      */
     @FXML
     void handleMenu(ActionEvent event) throws IOException {
-        sceneController.mainMenu(event);
+        appController.mainMenu(event);
     }
 
     /**
@@ -141,7 +140,7 @@ public class ManageCustomersController {
                     return;
                 }
                 DataCache.deleteCustomer(selectedCustomer);
-                sceneController.mainMenu(event);
+                appController.mainMenu(event);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -157,7 +156,7 @@ public class ManageCustomersController {
     @FXML
     void handleUpdate(ActionEvent event) throws IOException {
         if (selectedCustomer != null)
-            sceneController.updateCustomer(event, selectedCustomer);
+            appController.updateCustomer(event, selectedCustomer);
     }
 
 }
