@@ -152,3 +152,7 @@ Aug 28, 2021 12:21:44 PM logic.SessionInformation login
 INFO: Successful Login Attempt Username: test
 Aug 28, 2021 12:22:49 PM logic.SessionInformation login
 INFO: Successful Login Attempt Username: test
+Aug 28, 2021 12:27:17 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test
+Aug 28, 2021 12:49:37 PM logic.SessionInformation login
+INFO: Successful Login Attempt Username: test

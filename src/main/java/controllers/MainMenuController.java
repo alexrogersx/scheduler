@@ -41,9 +41,12 @@ public class MainMenuController {
     private final FilteredList<Appointment> appointmentUpcomingFilteredList = new FilteredList<>(DataCache.getAppointments(), this::upcomingAppointmentPredicate);
 
     /**
-     * Login.
+     * Informs user on login if there are upcoming appointments.
      */
     public void login(){
+        if (appointmentUpcomingFilteredList.isEmpty()){
+            return;
+        }
         Dialog<String> inform = Prompts.informUpcomingAppointments(appointmentUpcomingFilteredList);
         inform.show();
     }
