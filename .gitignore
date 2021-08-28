@@ -55,3 +55,8 @@
 /target/login_activity.txt
 /target/error_logs.txt
 /target/dependency/mysql-connector-java-8.0.25.jar
+/target/classes/
+/target/dependency/
+/target/generated-sources/
+/target/maven-archiver/
+/target/maven-status/
