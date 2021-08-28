@@ -1,8 +1,10 @@
 # Appointment Scheduling Tool
-A JavaFX Appointment and Customer Managment App
+> A Appointment and Customer Managment App Written in Java
 
 ## To Run 
-Run Scheduler.jar located in /target. 
+1. [Install Java](https://www.java.com/en/download/) if not already installed.
+2. Download or Clone this repo (or optionally just download the .jar file mentioned below)
+3. Run .jar file located in the target directory 
 
 ## About
 This application is a customer appointment management solution designed for a small business who needs to keep track of
