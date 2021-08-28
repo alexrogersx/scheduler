@@ -43,3 +43,15 @@
 /target/classes/helpers/TimeTableCellFactory.class
 /target/classes/logic/User.class
 /target/classes/db/UsersDAO.class
+/target/dependency/protobuf-java-3.11.4.jar
+/target/dependency/javafx-base-11.0.1.jar
+/target/dependency/javafx-base-11.0.1-mac.jar
+/target/dependency/javafx-controls-11.0.1.jar
+/target/dependency/javafx-controls-11.0.1-mac.jar
+/target/dependency/javafx-fxml-11.0.1.jar
+/target/dependency/javafx-fxml-11.0.1-mac.jar
+/target/dependency/javafx-graphics-11.0.1.jar
+/target/dependency/javafx-graphics-11.0.1-mac.jar
+/target/login_activity.txt
+/target/error_logs.txt
+/target/dependency/mysql-connector-java-8.0.25.jar
